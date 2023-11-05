@@ -1,0 +1,21 @@
+[package]
+name = "tagsandblocks"
+authors = ["EvgenHi"]
+license = "MIT"
+description = "Statusbar for riverwm"
+keywords = ["wayland", "statusbar", "bin"]
+readme = "README.md"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+bitflags = "2.4.0"
+pangocairo = "0.18.0"
+env_logger = "0.10.0"
+memmap2 = "0.9.0"
+wayland-backend = { version = "0.3.2", features = ["client_system", "dlopen", "log", "raw-window-handle"] }
+wayland-client = { version = "0.31.1", features = ["log"] }
+# wayland-protocols = { version = "0.31.0", features = ["client", "staging", "unstable"] }
+wayland-protocols-wlr = { version = "0.2.0", features = ["client", "wayland-client"] }
+wayland-scanner = "0.31.0"
+libc = "0.2.149"
